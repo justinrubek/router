@@ -31,11 +31,11 @@
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "lastModified": 1665699806,
-        "narHash": "sha256-Mwh8u8BcxDVK+2gYcgsgOHHhJuEifmJy34GljncEpeU=",
+        "lastModified": 1665952569,
+        "narHash": "sha256-QLGF7Cm4Mdby/1lYoiE5X5PVqMcSh/tpJrIgJ30hWQU=",
         "owner": "astro",
         "repo": "nix-openwrt-imagebuilder",
-        "rev": "cc23d5bd082d022e7cd6a333c7caf10da1b15862",
+        "rev": "3af82aff809fe7d68a19a1769ea23654c52948b0",
         "type": "github"
       },
       "original": {
