@@ -1,0 +1,28 @@
+name: release build
+on:
+  push:
+    tags:
+      - "*"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Install nix
+        uses: cachix/install-nix-action@v15
+        with:
+          extra_nix_config: |
+            access-tokens = github=${{ github.token }}
+
+      - name: configure cachix
+        uses: cachix/cachix-action@v10
+        with:
+          name: justinrubek
+          authToken: '${{ secrets.CACHIX_AUTH_TOKEN }}'
+
+      - name: build
+        run: nix flake build
